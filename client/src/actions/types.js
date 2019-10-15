@@ -1,0 +1,3 @@
+export const FETCH_ALL_FRIENDS = 'FETCH_ALL_FRIENDS'
+export const ADD_FRIEND = 'ADD_FRIEND'
+export const DELETE_FRIEND = 'DELETE_FRIEND'

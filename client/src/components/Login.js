@@ -6,6 +6,7 @@ const Login = props => {
     username: 'Lambda School',
     password: 'i<3Lambd4'
   })
+
   const handleChange = e => {
     setUserCredentials({ ...userCredentials, [e.target.name]: e.target.value })
     console.log(userCredentials)

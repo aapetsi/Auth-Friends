@@ -1,16 +1,10 @@
 import React from 'react'
-import axiosAuth from '../axiosAuth'
+import { deleteFriend } from '../actions/actions'
+import { connect } from 'react-redux'
 
-const Friend = ({ id, name, age, email }) => {
+const Friend = ({ id, name, age, email, dispatch }) => {
   const handleClick = () => {
-    axiosAuth()
-      .delete(`/friends/${id}`)
-      .then(res => {
-        console.log(res.data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
+    dispatch(deleteFriend(id))
   }
   return (
     <div>
@@ -22,4 +16,7 @@ const Friend = ({ id, name, age, email }) => {
   )
 }
 
-export default Friend
+export default connect(
+  null,
+  null
+)(Friend)
